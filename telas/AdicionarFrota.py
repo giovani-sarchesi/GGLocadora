@@ -1,5 +1,6 @@
 import sqlite3
 import telas.Menu
+import telas.AdicionarFrota
 import os
 
 def main():
@@ -8,21 +9,21 @@ def main():
 
   print("Adicionar frota:")
   nomecarro = input("Digite o nome da frota: ")
-  ano = int(input("Digite o ano da frota: "))
-  km = input("Digite quantidade km da frota: ")
-  precodiaria = input("Digite o valor da diaria da frota: ")
-
+  precodiaria = float(input("Digite o valor da diaria da frota: "))
 
   try:
-    conn.execute(f'insert into frotas(nomefrota, ano, qtdkm, precodiaria) values("{nomecarro}", "{ano}", "{km}", "{precodiaria}")')
+    conn.execute(f'insert into frotas(nomefrota, precodiaria) values("{nomecarro}", "{precodiaria}")')
     conn.commit()
     input("Frota adicionada com sucesso. Tecle Enter para voltar.")
     conn.close()
     telas.Menu.main()
   except:
-    input("Erro ao adicionar a frota. Tecle Enter para voltar.")
-    conn.close()
-    telas.Menu.main()
+    tenta = input("Erro ao adicionar frota, deseja tentar novamente? S - Sim / N - Não ")
+    if tenta in ('S', 's', 'Sim', 'sim'):
+      telas.AdicionarFrota.main()
+    elif tenta in ('N', 'n', 'Não', 'não'):
+      conn.close()
+      telas.Menu.main()
 
 
 

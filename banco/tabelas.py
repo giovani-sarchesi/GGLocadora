@@ -14,9 +14,7 @@ def create():
         create table if not exists frotas(
                 seqfrota integer not null primary key autoincrement,
                 nomefrota text not null,
-                ano integer not null,
-                qtdkm text not null,
-                precodiaria text not null
+                precodiaria real not null
             );""")
 
         con.execute("""
@@ -24,8 +22,8 @@ def create():
                 seqreserva integer not null primary key autoincrement,
                 seqfrota integer not null,
                 seqcliente integer not null,
-                qtdediarias text not null,
-                vlrreserva text not null,
+                qtdediarias integer not null,
+                vlrreserva real not null,
 
                 foreign key(seqfrota) references frotas(seqfrota)
                 foreign key(seqcliente) references clientes(seqcliente)
@@ -34,15 +32,13 @@ def create():
 
         con.execute("""
         create table if not exists clientes(
-                seqcliente integer not null primary key,
+                seqcliente integer not null primary key autoincrement,
                 nomecliente text not null
             );
             """)
 
         con.commit()
-        print("Banco de dados criado com sucesso !")
-        input("Tecle entrar para continuar..")
+        return
 
     else:
-        print("O Banco de dados já está criado !")
-        input("Tecle entrar para continuar..")
+      return

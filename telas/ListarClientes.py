@@ -7,11 +7,11 @@ def main():
   conn = sqlite3.connect('./banco/dados.db')
   cursor = conn.cursor()
 
-  print("Frota(s) cadastrada(s):")
+  print("Cliente(s) cadastrado(s):")
 
 
   try:
-    cursor.execute("""SELECT * FROM frotas;""")
+    cursor.execute("""SELECT * FROM clientes;""")
 
     for linha in cursor.fetchall():
       print(linha)
@@ -20,6 +20,6 @@ def main():
     conn.close()
     telas.Menu.main()
   except:
-    input("Erro ao buscar frotas. Tecle Enter para voltar.")
+    input("Erro ao buscar clientes. Tecle Enter para voltar.")
     conn.close()
     telas.Menu.main()
