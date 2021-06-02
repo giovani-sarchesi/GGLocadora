@@ -1,0 +1,22 @@
+[
+    {
+        "seqfrota": 1,
+        "nomefrota": "Frota 1",
+        "precodiaria": 15.0
+    },
+    {
+        "seqfrota": 2,
+        "nomefrota": "Frota 2",
+        "precodiaria": 20.0
+    },
+    {
+        "seqfrota": 3,
+        "nomefrota": "Gol",
+        "precodiaria": 50.0
+    },
+    {
+        "seqfrota": 4,
+        "nomefrota": "Preciosa",
+        "precodiaria": 100.0
+    }
+]

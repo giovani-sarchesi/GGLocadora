@@ -20,7 +20,7 @@ def main():
       conn.close()
       telas.Menu.main()
     else:
-      tenta = input("Frota não encontrada, deseja tentar novamente? S - Sim / N - Não ")
+      tenta = input("Frota não cadastrada, deseja tentar novamente? S - Sim / N - Não ")
       if tenta in ('S', 's', 'Sim', 'sim'):
         telas.AtualizarFrota.main()
       elif tenta in ('N', 'n', 'Não', 'não'):
