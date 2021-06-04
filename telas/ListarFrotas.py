@@ -14,7 +14,11 @@ def main():
     cursor.execute("""SELECT * FROM frotas;""")
 
     for linha in cursor.fetchall():
-      print(linha)
+      print("=============================================")
+      print(f'Código: {linha[0]}')
+      print(f'Nome carro: {linha[1]}')
+      print(f'Preço diária: R${linha[2]}')
+      print("=============================================")
 
     input("Tecle Enter para voltar...")
     conn.close()

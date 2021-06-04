@@ -18,5 +18,20 @@
         "seqfrota": 4,
         "nomefrota": "Preciosa",
         "precodiaria": 100.0
+    },
+    {
+        "seqfrota": 5,
+        "nomefrota": "Palio 1.0 ECONOMY Fire Flex 8V 4p",
+        "precodiaria": 49.0
+    },
+    {
+        "seqfrota": 6,
+        "nomefrota": "GT Coup\u00e9 4.0 Bi-Turbo V8 2p",
+        "precodiaria": 5094.67
+    },
+    {
+        "seqfrota": 7,
+        "nomefrota": "Fusc\u00e3o Preto",
+        "precodiaria": 8.0
     }
 ]

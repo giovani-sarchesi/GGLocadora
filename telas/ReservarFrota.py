@@ -26,7 +26,7 @@ def main():
         else:
           for f in frota:
             for c in cliente:
-              confirma = input(f'Confirmar reserva?\nFrota: {f[0]} - {f[1]}\nCliente: {c[0]} - {c[1]}\nDiárias: {qtddiarias}\nValor total: {f[2] * qtddiarias}\n')
+              confirma = input(f'Confirmar reserva?\nFrota: {f[0]} - {f[1]}\nCliente: {c[0]} - {c[1]}\nDiárias: {qtddiarias}\nValor total: {f[2] * qtddiarias}?\nS - Sim / N - Não\n')
               if confirma in ('S', 's', 'Sim', 'sim'):
                 conn.execute(f'insert into reservas(seqfrota, seqcliente, qtdediarias, vlrreserva) values("{f[0]}", "{c[0]}", "{qtddiarias}", "{qtddiarias * f[2]}")')
                 conn.commit()

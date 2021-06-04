@@ -14,7 +14,10 @@ def main():
     cursor.execute("""SELECT * FROM clientes;""")
 
     for linha in cursor.fetchall():
-      print(linha)
+      print("=====================================")
+      print(f'Código: {linha[0]}')
+      print(f'Nome cliente: {linha[1]}')
+      print("=====================================")
 
     input("Tecle Enter para voltar...")
     conn.close()

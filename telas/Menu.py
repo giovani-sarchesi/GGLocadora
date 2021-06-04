@@ -12,6 +12,7 @@ import telas.AtualizarCliente
 import telas.ExcluirCliente
 import telas.ListarClientes
 import telas.Exportarjson
+import telas.Importarjson
 import telas.Sobre
 
 def main():
@@ -60,6 +61,8 @@ def main():
       telas.ListarClientes.main()
     elif sel in ("12"):
       telas.Exportarjson.main()
+    elif sel in ("13"):
+      telas.Importarjson.main()
     elif sel in ("14"):
       telas.Sobre.main()
     elif sel in ("15"):
